@@ -1,0 +1,622 @@
+<!-- Created by ❤️😍Prerana😍❤️ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="second.css">
+    <style>
+        /* Created by ❤️😍Prerana😍❤️ */
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #b3cccc;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            position: relative;
+            width: 400px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 270px;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to top, #6caafa, rgb(96, 204, 246));
+            clip-path: circle(400px at 50% -48.5%);
+        }
+
+        .header {
+            position: relative;
+            height: 265px;
+        }
+
+        .mail {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            font-size: 1.5rem;
+            color: #fff;
+            opacity: .7;
+            transition: .3s;
+            z-index: 3;
+            text-decoration: none;
+        }
+
+        .mail:hover {
+            opacity: 1;
+        }
+
+        .hamburger-menu {
+            position: absolute;
+            width: 21px;
+            height: 16px;
+            top: 1.4rem;
+            left: 1.9rem;
+            z-index: 3;
+            cursor: pointer;
+            transition: .3s;
+            opacity: .8;
+        }
+
+        .hamburger-menu:hover {
+            opacity: 1;
+        }
+
+        .hamburger-menu .center {
+            position: absolute;
+            height: 2px;
+            width: 70%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            border-radius: 1px;
+        }
+
+        .hamburger-menu:before,
+        .hamburger-menu:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 1px;
+            background-color: #fff;
+        }
+
+        .hamburger-menu:before {
+            top: 0;
+        }
+
+        .hamburger-menu:after {
+            bottom: 0;
+        }
+
+        .main {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .image {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: url('https://api.sololearn.com/uploads/avatars/20082039.jpg') no-repeat center / cover;
+            border: 4px solid #fff;
+            margin-bottom: 2px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .image .hover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(79, 172, 254, .7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            transition: .5s;
+            opacity: 0;
+        }
+
+        .image:hover .hover {
+            opacity: 1;
+        }
+
+        .hover.active {
+            opacity: 1;
+        }
+
+        .name {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 500;
+            line-height: 1;
+            margin: 5px 0;
+        }
+
+        .sub-name {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1rem;
+            opacity: .6;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .follow-wraper {
+            display: flex;
+            place-items: center;
+
+
+        }
+
+        .follow-wraper>div {
+            height: 35px;
+            flex: 0 0 auto;
+            margin: 10px 10px 0 10px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.068);
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+
+        }
+
+        .content {
+            display: flex;
+            padding: 1.7rem 2.5rem 2.6rem 2.5rem;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            align-items: flex-end;
+            margin-left: 2.1rem;
+        }
+
+        .language {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #333;
+            line-height: 1.2;
+        }
+
+        .number-title {
+            font-size: .60rem;
+            color: #666;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+        }
+
+        .title {
+            position: relative;
+            color: #555;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0 0 3px 0;
+            margin-bottom: .9rem;
+            display: inline-block;
+        }
+
+        .title:after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 50%;
+            background-color: #555;
+            bottom: 0;
+            left: 0;
+        }
+
+        .text {
+            color: #666;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .icons-container {
+            padding: 1rem 0;
+        }
+
+        .icon {
+            color: #c4c4c4;
+            font-size: 1.3rem;
+            text-decoration: none;
+            margin-right: 8px;
+            transition: .3s;
+        }
+
+        .icon:hover {
+            color: tomato;
+        }
+
+        .buttons-wrap {
+            display: flex;
+            margin-top: 5px;
+        }
+
+        .follow-wrap,
+        .share-wrap {
+            flex: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+        }
+
+
+
+        .follow-wrap:hover,
+        .share-wrap:hover {
+            flex: 5;
+        }
+
+        .follow {
+            padding: 9.6px 0;
+            width: 100%;
+            background: linear-gradient(to right, rgb(71, 172, 255) 0%, rgb(189, 240, 255) 140%);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: .8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 18.1px;
+            margin-right: 3px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.253);
+            transition: 200ms ease-in-out;
+
+        }
+
+        .follow:hover {
+            background: linear-gradient(to right, rgb(251, 251, 251) 0%, rgb(189, 240, 255) 140%);
+            color: #4facfe;
+        }
+
+        .share {
+            padding: 7.6px 0;
+            width: 100%;
+            border: 2px solid rgb(71, 181, 255);
+            color: #4facfe;
+            text-decoration: none;
+            text-align: center;
+            font-size: .8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-left: 3px;
+            border-radius: 18.1px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.253);
+            transition: 500ms ease-in-out;
+        }
+
+
+        .modal {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .modal img {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.3);
+            max-width: 100%;
+            max-height: 100%;
+            transition: .5s;
+        }
+
+        .modal.show {
+            opacity: 1;
+            z-index: 99;
+        }
+
+        .modal.show img {
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .close:hover {
+            opacity: .5;
+        }
+
+        .close:before,
+        .close:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            border-radius: 1.5px;
+            top: 50%;
+            left: 50%;
+            background-color: #fff;
+        }
+
+        .close:before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .close:after {
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+
+        @media (max-width: 350px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .right {
+                flex-direction: row;
+                text-align: center;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 370px) {
+            .header {
+                height: 230px;
+            }
+
+            .card:before {
+                clip-path: circle(400px at 50% -74.5%);
+                height: 230px;
+            }
+
+            .hamburger-menu {
+                width: 16px;
+                height: 12px;
+                top: 1.1rem;
+                left: 1.5rem;
+            }
+
+            .mail {
+                font-size: 1.1rem;
+                top: .75rem;
+                right: 1.5rem;
+            }
+
+            .main .image {
+                width: 90px;
+                height: 90px;
+                border-width: 3px;
+            }
+
+            .name,
+            .sub-name {
+                font-size: 1rem;
+            }
+
+            .content {
+                padding: 1.2rem 1.8rem 1.8rem 1.8rem;
+            }
+
+            .number {
+                font-size: 1.8rem;
+            }
+
+            .number-title {
+                font-size: .4rem;
+            }
+
+            .right {
+                padding-top: 1rem;
+            }
+
+            .title {
+                font-size: .9rem;
+                margin-bottom: .5rem;
+            }
+
+            .text {
+                font-size: .9rem;
+            }
+
+            .icons-container {
+                padding: .5rem 0;
+            }
+
+            .icon {
+                font-size: 1.1rem;
+            }
+
+            .follow {
+                padding: 7.6px 0;
+                border-radius: 14.6px;
+                font-size: .6rem;
+            }
+
+            .share {
+                padding: 5.6px 0;
+                border-radius: 14.6px;
+                font-size: .6rem;
+            }
+        }
+    </style>
+    <title>Profile Card</title>
+</head>
+
+<body>
+    <div class="modal">
+        <img src="img/img.jpg" alt="">
+        <div class="close"></div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="hamburger-menu">
+                    <div class="center"></div>
+                </div>
+                <a href="#" class="mail">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <div class="main">
+                    <div class="image">
+                        <div class="hover">
+                            <em class="fas fa-camera fa-2x"></em>
+                        </div>
+                    </div>
+                    <h3 class="name">Rishu | 🇮🇳</h3>
+                    <h3 class="sub-name">Passionate Photographer📸📸</h3>
+                    <div class="follow-wraper">
+                        <div class="followers" id="foll"></div>
+                        <div class="following" id="fl"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content">
+                <div class="left">
+                    <div class="about-container">
+                        <h3 class="title">About</h3>
+                        <p class="text">Hi Fams, <br> My name is Rishu. I'm A BBA(CA) first year student. </p>
+                    </div>
+                    <div class="icons-container">
+
+                        <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="icon">
+                            <em class="fab fa-facebook"></em>
+                        </a>
+
+                        <a href="#" class="icon">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                        <a href="#" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="buttons-wrap">
+                        <div class="follow-wrap">
+                            <a href="https://www.instagram.com/rishusnehansh/" class="follow"
+                                target="_blank">Follow</a>
+                        </div>
+                        <div class="share-wrap">
+                            <a href="#" class="share">Share</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    Country: India🇮🇳<br>
+
+                    level: 15
+
+                    <div class="right">
+                        Skills
+                        <div>
+                            <h3 class="language">C</h3>
+                            <h3 class="number-title">4.8/5</h3>
+                        </div>
+                        <div>
+                            <h3 class="language">Kotlin</h3>
+                            <h3 class="number-title">4.6/5</h3>
+                        </div>
+                        <div>
+                            <h3 class="language">C++</h3>
+                            <h3 class="number-title">4.3/5</h3>
+                        </div>
+
+
+                        <div>
+                            <h3 class="language">Java</h3>
+                            <h3 class="number-title">3.7/5</h3>
+                        </div>
+                        <div>
+                            <h3 class="language">Python</h3>
+                            <h3 class="number-title">3.2/5</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="second.js"></script>
+        <script>
+            // Created by ❤️😍Prerana😍❤️
+            alert("coded by ❤️😍Prerana😍❤️")
+            // alert("upvote if you like 😍😍")
+            alert("Follow for more")
+            var userId = 20847446;
+            async function data() {
+
+                var a = await fetch("https://api2.sololearn.com/v2/userinfo/v3/profile/" + userId);
+
+
+                var b = await a.json();
+                var data = b;
+
+                document.getElementById("foll").innerHTML += data.userDetails.followers + " followers";
+                document.getElementById("fl").innerHTML += data.userDetails.following + " following";
+
+            }
+
+            window.onload = data()
+
+
+
+
+        </script>
+</body>
+
+</html>
